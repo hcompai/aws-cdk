@@ -408,7 +408,7 @@ export class SecurityGroup extends SecurityGroupBase {
     class MutableImport extends SecurityGroupBase {
       public securityGroupId = securityGroupId;
       public allowAllOutbound = options.allowAllOutbound ?? true;
-      public allowAllIpv6Outbound = options.allowAllIpv6Outbound ?? false;
+      public allowAllIpv6Outbound = options.allowAllIpv6Outbound ?? true;
 
       public addEgressRule(peer: IPeer, connection: Port, description?: string, remoteRule?: boolean) {
         // Only if allowAllOutbound has been disabled
